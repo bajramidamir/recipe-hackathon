@@ -1,18 +1,20 @@
 import React from 'react';
-import { View, NativeBaseProvider, Text, Box } from 'native-base';
+import { NativeBaseProvider, Text, VStack , Center } from 'native-base';
 import RecipeCard from './components/RecipeCard';
+import CardNav from './components/CardNav';
 
 const MainScreen = ({navigation}: {navigation : any}) => {
   return (
     <NativeBaseProvider>
-        <Box flex={1} alignItems="center" bg="#ecfeff">
-            <Text fontSize="4xl">
-                Recommended Recipe
-            </Text>
-            <RecipeCard />    
-
-        </Box>
-        
+        <Center>
+            <VStack space={3} alignContent="center" p={4}>
+                <Text fontSize="4xl">
+                    Recommended Recipe
+                </Text>
+                <RecipeCard />
+                <CardNav />
+            </VStack>
+        </Center>
     
     </NativeBaseProvider>
   )
