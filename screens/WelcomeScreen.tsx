@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, NativeBaseProvider, Text , Input, extendTheme, useColorModeValue, Box } from 'native-base';
+import { View, Button, NativeBaseProvider, Text , Input, extendTheme, useColorModeValue, Box , Checkbox, Flex} from 'native-base';
 import { useColorScheme } from 'react-native';
 
 
@@ -33,7 +33,12 @@ const WelcomeScreen = ({navigation} : {navigation : any}) => {
           Login
         </Button>
         <Text alignSelf='center' fontSize='3xl' marginTop='25px'>Select allergies or intolerances</Text>
-        <Box alignSelf='center' width='95%' bgColor='gray.300' height='70%'>isjolsgjsol</Box>
+        <Box   alignSelf='center' width='90%' bgColor='gray.300' height='70%' p='4'>
+          <Flex alignItems = "center" flexDirection="row"  justifyContent="space-between">
+          <Text mr='2' fontSize='2xl'>Peanut allergy</Text>
+          <Checkbox value='test' marginRight='2' marginTop='20' />
+          </Flex>
+        </Box>
     </View>
     </NativeBaseProvider>
   )
