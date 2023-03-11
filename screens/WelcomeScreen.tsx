@@ -44,6 +44,8 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           onPress={() => navigation.navigate('Main')}>
           Enter app
         </Button>
+
+        
         <Text
           alignSelf="center"
           fontSize="3xl"
