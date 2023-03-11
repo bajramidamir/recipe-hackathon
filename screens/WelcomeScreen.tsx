@@ -10,6 +10,7 @@ import {
   Box,
   Checkbox,
   Flex,
+  ScrollView
 } from 'native-base';
 import intolerances from '../intolerances';
 import ListItem from './components/ListItem';
@@ -18,7 +19,7 @@ import ListItem from './components/ListItem';
 const WelcomeScreen = ({navigation}: {navigation: any}) => {
   return (
     <NativeBaseProvider>
-      <View>
+      <ScrollView>
         <Text fontSize="4xl" p="4" textAlign="center" bgColor={'black'}>
           Enter your username below
         </Text>
@@ -67,7 +68,7 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           )}
 
         </Box>
-      </View>
+      </ScrollView>
     </NativeBaseProvider>
   );
 };
