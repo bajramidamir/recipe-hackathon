@@ -15,7 +15,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Hello username :)" component={WelcomeScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
