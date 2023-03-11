@@ -7,7 +7,7 @@ const MainScreen = ({navigation}: {navigation : any}) => {
   return (
     <NativeBaseProvider>
         <Center>
-            <VStack space={3} alignContent="center" p={4}>
+            <VStack space={3} alignContent="center" p={2}>
                 <Text fontSize="4xl">
                     Recommended Recipe
                 </Text>
