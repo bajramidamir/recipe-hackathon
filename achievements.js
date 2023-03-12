@@ -18,4 +18,5 @@ export default[
         progress: '25/30 Dishes cooked',
         completed: false
     },
+    
 ]
