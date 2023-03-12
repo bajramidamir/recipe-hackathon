@@ -7,10 +7,11 @@ export default[
     },
     {
         id:2,
-        name:'Intermediate Chef',
+        name:'Intermed Chef',
         progress: '20/20 Dishes cooked',
         completed: true
     },
+
     {
         id:3,
         name:'Master Chef',

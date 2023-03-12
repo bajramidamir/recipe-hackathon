@@ -10,12 +10,16 @@ import {
     Box,
     Checkbox,
     Flex,
+    Badge,
+    Popover,
   } from 'native-base';
+  import { Image } from 'native-base';
 import ListAchievement from './components/ListAchievement';
 import achievements from '../achievements';
 
 
 const AchScreen = () => {
+    
   return (
     <NativeBaseProvider>
         <View>
@@ -42,6 +46,9 @@ const AchScreen = () => {
             )}
         </Text>
         </Box>
+        <Badge>
+            <Image source={{uri:'https://cdn.pixabay.com/photo/2015/10/01/17/17/car-967387_960_720.png'}}/>
+        </Badge>
         </View>
     </NativeBaseProvider>
   )
