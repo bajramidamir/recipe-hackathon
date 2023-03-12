@@ -1,61 +1,26 @@
-import React, { useState } from 'react';
-import { db, auth } from "../firebase.js";
-import { collection, addDoc, doc, setDoc  } from "firebase/firestore";
-import {
-  View,
-  Button,
-  NativeBaseProvider,
-  Text,
-  Input,
-  extendTheme,
-  useColorModeValue,
-  Box,
-  Checkbox,
-  Flex,
-  ScrollView
-} from 'native-base';
-import intolerances from '../intolerances';
-import ListItem from './components/ListItem';
-
-
+import React from 'react';
+import {NativeBaseProvider, Button, Text, ScrollView} from 'native-base';
 
 const WelcomeScreen = ({navigation}: {navigation: any}) => {
-
-  
   return (
     <NativeBaseProvider>
       <ScrollView>
-        <Text fontSize="4xl" p="4" textAlign="center" bgColor={'black'}>
-          Enter your username below
+        <Text fontSize="6xl" p="4" mb="10" textAlign="center" bgColor={'black'}>
+          Welcome to Daily Menu
         </Text>
-        <Input
-          placeholder="Enter username"
-          p="3"
-          size="2xl"
-          color={'gray.500'}
-          bgColor={'gray.100'}
-          width="75%"
-          textAlign="center"
-          mx="auto"
-          mb="4"
-          
-          
-        />
-
         <Button
           width="65%"
           mx="auto"
           rounded="lg"
           bgColor="#64748B"
           size="lg"
-          shadow="md"
+          mb="10"
           onPress={() => {
-            navigation.navigate('Recipes')
-            
+            navigation.navigate('Recipes');
           }}>
           Enter app
         </Button>
-        
+
         <Button
           width="65%"
           mx="auto"
@@ -63,35 +28,9 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           rounded="lg"
           bgColor="#64748B"
           size="lg"
-          shadow="md"
           onPress={() => navigation.navigate('Achievements')}>
           Achievements
         </Button>
-
-        
-        <Text
-          alignSelf="center"
-          fontSize="3xl"
-          marginTop="25px"
-          marginBottom="10px">
-          Select allergies or intolerances
-        </Text>
-        <Box
-          alignSelf="center"
-          width="90%"
-          bgColor="gray.300"
-          rounded="lg"
-          p="4">
-          
-          {intolerances.map( intolerance => (
-            <ListItem
-              text={intolerance.text}
-              value={intolerance.value} />
-          )
-
-          )}
-
-        </Box>
       </ScrollView>
     </NativeBaseProvider>
   );

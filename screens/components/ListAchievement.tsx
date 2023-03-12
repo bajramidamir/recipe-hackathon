@@ -10,11 +10,11 @@ completed:boolean;
 
 const ListAchievement = ({id,name,progress,completed}: AchievementsPropType) => {
   return (
-    <Flex direction="row" justifyContent='flex-end'>
+    <Box>
     
-      <Text px="4" fontSize="xl" bg={completed ? 'green.300' : 'black'} color={completed? 'black':'white'}>{id}. {name} {"\n"} {progress} </Text>
+      <Text textAlign='center' px="4" fontSize="xl" bg={completed ? 'green.300' : 'black'} color={completed? 'black':'white'}>{id}. {name} {"\n"} {progress} </Text>
      
-    </Flex>
+    </Box>
    
   );
 };
