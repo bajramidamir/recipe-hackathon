@@ -8,7 +8,7 @@ const RecipeCard = () => {
             <Text fontSize="2xl" textAlign="center">
                 RecipeName
             </Text>
-            <Image source={{uri:"https://assets.bonappetit.com/photos/597f6564e85ce178131a6475/16:9/w_1280,c_limit/0817-murray-mancini-dried-tomato-pie.jpg"}} width="full" alt="Food" size="2xl" />
+            <Image source={{uri:"https://assets.bonappetit.com/photos/597f6564e85ce178131a6475/16:9/w_1280,c_limit/0817-murray-mancini-dried-tomato-pie.jpg"}} alt="Food" size="2xl" />
         </VStack>
     </Box>
 

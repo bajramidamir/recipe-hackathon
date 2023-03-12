@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import firebase from '../firebase';
-import {getDatabase, ref, set} from 'firebase/database';
+import { db, auth } from "../firebase.js";
+import { collection, addDoc, doc, setDoc  } from "firebase/firestore";
 import {
   View,
   Button,
@@ -18,21 +18,10 @@ import intolerances from '../intolerances';
 import ListItem from './components/ListItem';
 
 
+
 const WelcomeScreen = ({navigation}: {navigation: any}) => {
 
-  const [name, setName] = useState('')
-
-  const handleChangeText = (newName: React.SetStateAction<string>) => {
-    setName(newName);
-  }
- 
-  const handleSaveText = () => {
-    const db = getDatabase();
-    set(ref(db, 'name/' + name), {
-      
-    })
-  }
-
+  
   return (
     <NativeBaseProvider>
       <ScrollView>
@@ -49,7 +38,8 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           textAlign="center"
           mx="auto"
           mb="4"
-          onChangeText={handleChangeText}
+          
+          
         />
 
         <Button
@@ -61,7 +51,7 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           shadow="md"
           onPress={() => {
             navigation.navigate('Main')
-            handleSaveText 
+            
           }}>
           Enter app
         </Button>
