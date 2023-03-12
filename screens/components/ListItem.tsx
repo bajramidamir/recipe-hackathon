@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex, Box, Text, Checkbox} from 'native-base';
+import {Flex, Text, Checkbox} from 'native-base';
 
 type IntolerancesPropType = {
   text: string;

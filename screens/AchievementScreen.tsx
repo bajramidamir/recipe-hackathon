@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     View,
     Button,
@@ -15,7 +15,7 @@ import ListAchievement from './components/ListAchievement';
 import achievements from '../achievements';
 
 
-const AchScreen = () => {
+const AchievementScreen = () => {
   return (
     <NativeBaseProvider>
         <View>
@@ -47,4 +47,4 @@ const AchScreen = () => {
   )
 }
 
-export default AchScreen
+export default AchievementScreen

@@ -50,7 +50,7 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           size="lg"
           shadow="md"
           onPress={() => {
-            navigation.navigate('Main')
+            navigation.navigate('Recipes')
             
           }}>
           Enter app
