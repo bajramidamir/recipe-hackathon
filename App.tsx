@@ -19,7 +19,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Hello username :)" component={WelcomeScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="Achievements" component={AchScreen} options={{headerTitleAlign: 'center'}}/>
+        <Stack.Screen name="Achievements" component={AchScreen} options={{headerTitleAlign: 'center'}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

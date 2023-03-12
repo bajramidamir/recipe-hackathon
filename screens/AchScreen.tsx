@@ -11,25 +11,35 @@ import {
     Checkbox,
     Flex,
   } from 'native-base';
+import ListAchievement from './components/ListAchievement';
+import achievements from '../achievements';
+
+
 const AchScreen = () => {
   return (
     <NativeBaseProvider>
         <View>
         <Box
-          width='60%' 
-          height='20%'
+          width='80%' 
           justifyContent='center'
           alignSelf="center"
-          fontSize="3xl"
+          fontSize="2xl"
           marginTop="25px"
           marginBottom="10px"
-          bg='gray.600'
           rounded="lg">
         <Text 
         color='white'
         
         alignSelf='center'>
-          Achievements
+          {achievements.map(achievement =>(
+                <ListAchievement 
+                id={achievement.id}
+                name={achievement.name}
+                progress={achievement.progress}
+                completed={achievement.completed}
+                 />
+            )
+            )}
         </Text>
         </Box>
         </View>

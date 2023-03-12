@@ -45,6 +45,18 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           onPress={() => navigation.navigate('Main')}>
           Enter app
         </Button>
+        
+        <Button
+          width="65%"
+          mx="auto"
+          my="10px"
+          rounded="lg"
+          bgColor="#64748B"
+          size="lg"
+          shadow="md"
+          onPress={() => navigation.navigate('Achievements')}>
+          Achievements
+        </Button>
 
         
         <Text
