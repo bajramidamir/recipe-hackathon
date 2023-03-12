@@ -5,7 +5,6 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import MainScreen from './screens/MainScreen';
 import AchScreen from './screens/AchScreen';
 
-
 // type rootStackParamList = {
 //   Home: undefined,
 //   Profile: {name : string}
